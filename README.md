@@ -1,10 +1,10 @@
-# Terraform Demo
+# Terraform Challenge Submission
 
 This repository provisions a secure AWS reference architecture for a microservices platform with three subnet tiers: `public`, `private`, and `isolated`. The design is intentionally infrastructure-only and targets workload accounts created through AWS Control Tower, with identity coming from AWS IAM Identity Center in the management account.
 
-The implementation favors reusable Terraform modules, explicit naming, and comments that explain intent and tradeoffs rather than restating syntax. That comment style follows the same principle repeated throughout the HashiCorp variable guidance and the Reddit discussion the brief referenced: readable code should carry most of the “what”, while comments explain the “why”, the constraints, and the odd-looking choices.
+This implementation favors reusable Terraform modules, explicit naming, and comments that explain intent and tradeoffs rather than restating syntax. That comment style follows the same principle repeated throughout the HashiCorp variable guidance and the common comment conventions.
 
-The v2 layout separates reusable building blocks into `generic_*` modules and workload-specific composition into `solution_*` modules. The root `main.tf` now orchestrates layers only, rather than carrying individual AWS resources inline.
+The layout separates reusable building blocks into `generic_*` modules and workload-specific composition into `solution_*` modules. The root `main.tf` now orchestrates layers only, rather than carrying individual AWS resources inline.
 
 ## Architecture Overview
 
