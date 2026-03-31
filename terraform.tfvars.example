@@ -1,0 +1,21 @@
+project_name                    = "terraform-demo"
+environment_name                = "dev"
+primary_region                  = "af-south-1"
+dr_region                       = "eu-west-1"
+availability_zone_count         = 2
+vpc_cidr                        = "10.42.0.0/16"
+public_subnet_cidrs             = ["10.42.0.0/24", "10.42.1.0/24"]
+private_subnet_cidrs            = ["10.42.10.0/24", "10.42.11.0/24"]
+isolated_subnet_cidrs           = ["10.42.20.0/24", "10.42.21.0/24"]
+nat_gateway_per_az              = false
+public_api_stage_name           = "v1"
+private_api_stage_name          = "internal"
+log_retention_days              = 90
+enable_waf                      = true
+enable_cross_region_replication = true
+
+tags = {
+  owner               = "platform-team"
+  cost-center         = "shared-services"
+  data-classification = "confidential"
+}

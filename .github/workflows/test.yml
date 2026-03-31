@@ -1,0 +1,55 @@
+name: Terraform Test
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  test:
+    name: terraform-test
+    runs-on: ubuntu-latest
+    env:
+      AWS_REGION: af-south-1
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.12.2
+
+      - name: Terraform fmt check
+        run: terraform fmt -check -recursive
+
+      - name: Terraform init
+        run: terraform init -backend=false
+
+      - name: Terraform validate
+        run: terraform validate
+
+      # A real plan is the closest thing this repo has to an infrastructure test.
+      # The step is conditional so merges still get syntax validation even before
+      # the repository is wired to an AWS role for CI.
+      - name: Configure AWS credentials
+        if: ${{ secrets.AWS_ROLE_TO_ASSUME != '' }}
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Terraform plan
+        if: ${{ secrets.AWS_ROLE_TO_ASSUME != '' }}
+        run: terraform plan -input=false -var-file=environments/dev.tfvars
+
+      - name: Explain skipped live plan
+        if: ${{ secrets.AWS_ROLE_TO_ASSUME == '' }}
+        run: |
+          echo "AWS_ROLE_TO_ASSUME is not configured."
+          echo "Terraform fmt/init/validate succeeded, but the live plan step was skipped."
