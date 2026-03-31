@@ -1,0 +1,68 @@
+name: Terraform Cost Estimate
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  infracost:
+    name: infracost
+    runs-on: ubuntu-latest
+    env:
+      AWS_REGION: af-south-1
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.12.2
+
+      - name: Configure AWS credentials
+        if: ${{ secrets.AWS_ROLE_TO_ASSUME != '' }}
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      # Cost analysis needs a Terraform plan JSON. We keep backend disabled here
+      # so the workflow can run after merge without depending on a shared remote
+      # state bucket configuration.
+      - name: Terraform init
+        run: terraform init -backend=false
+
+      - name: Terraform plan
+        if: ${{ secrets.AWS_ROLE_TO_ASSUME != '' && secrets.INFRACOST_API_KEY != '' }}
+        run: terraform plan -input=false -refresh=false -out=tfplan.binary -var-file=environments/dev.tfvars
+
+      - name: Export Terraform plan as JSON
+        if: ${{ secrets.AWS_ROLE_TO_ASSUME != '' && secrets.INFRACOST_API_KEY != '' }}
+        run: terraform show -json tfplan.binary > tfplan.json
+
+      - name: Set up Infracost
+        if: ${{ secrets.AWS_ROLE_TO_ASSUME != '' && secrets.INFRACOST_API_KEY != '' }}
+        uses: infracost/actions/setup@v3
+        with:
+          api-key: ${{ secrets.INFRACOST_API_KEY }}
+
+      - name: Generate cost estimate
+        if: ${{ secrets.AWS_ROLE_TO_ASSUME != '' && secrets.INFRACOST_API_KEY != '' }}
+        run: infracost breakdown --path=tfplan.json --format=json --out-file=infracost.json
+
+      - name: Render cost summary
+        if: ${{ secrets.AWS_ROLE_TO_ASSUME != '' && secrets.INFRACOST_API_KEY != '' }}
+        run: infracost output --path=infracost.json --format=table
+
+      - name: Explain skipped cost estimate
+        if: ${{ secrets.AWS_ROLE_TO_ASSUME == '' || secrets.INFRACOST_API_KEY == '' }}
+        run: |
+          echo "Cost estimate skipped."
+          echo "Expected repository secrets:"
+          echo "- AWS_ROLE_TO_ASSUME"
+          echo "- INFRACOST_API_KEY"

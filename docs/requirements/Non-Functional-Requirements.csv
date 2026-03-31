@@ -1,93 +1,93 @@
-,Product,Requirement ID,Requirement,Standard / Configuration,Status,Measurement Method,Evidence Type,Evidence,Contributor,Remediation Action,Remediation Type,Remediation Status,Additional Notes
-Q1,All Products,AV-01,Multi-AZ Deployment,Production workloads must run across >=2 Availability Zones,Not Measured,Manual,Note,All CFN templates have 2 az's,,,No change,No change,
-Q1,All Products,SEC-01,Encryption in Transit,All external endpoints must enforce TLS,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,DR-01,Defined DR Strategy,System must have documented disaster recovery architecture,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,LOG-01,Operational Log Retention,Logs retained for >=90 days,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,PERF-01,API Latency,Average API latency <=400ms,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,AV-01,Multi-AZ Deployment,Production workloads must run across at least two Availability Zones,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,AV-02,Database High Availability,Production databases must use Multi-AZ configuration,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,AV-03,Health Monitoring,Services must expose health endpoints and monitoring checks,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,AV-04,Automatic Service Recovery,Compute platforms must automatically restart failed workloads,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,AV-05,Uptime Monitoring,System uptime must be continuously monitored,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,AV-06,Load Balancing,Production systems must use load balancing,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,AV-07,Auto Scaling,System must support automatic scaling during demand spikes,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,AV-08,Graceful Degradation,System must continue operating during partial failures,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,AV-09,Peak Window Handling,System must support defined operational peak windows,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,AV-10,Service Dependency Monitoring,All service dependencies must be monitored,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,DR-01,Disaster Recovery Architecture,System must have documented disaster recovery architecture,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,DR-02,Recovery Time Objective,System must support recovery within four hours,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,DR-03,Recovery Point Objective,System must limit data loss to 24 hours or less,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,DR-04,Cross Region DR,Critical environments must support cross region recovery,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,DR-05,DR Testing,Disaster recovery procedures must be tested at least annually,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,DR-06,Backup Verification,Backups must be validated via restore testing,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,DR-07,Automated Backup Scheduling,Backup schedules must be automated,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,SEC-01,Encryption in Transit,All external endpoints must enforce TLS,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,SEC-02,Encryption at Rest,All persistent data stores must be encrypted,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,SEC-03,Secrets Management,Secrets must be stored in a centralized secret manager,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,SEC-04,Least Privilege Access,Access permissions must follow least privilege principles,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,SEC-05,Web Application Firewall,Production endpoints must use web application firewall protection,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,SEC-06,Security Monitoring,System must enable security monitoring tools,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,SEC-07,Security Logging,Security related events must be logged,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,SEC-08,Credential Rotation,Credentials must be rotated periodically,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,SEC-09,Identity Federation,Identity management must support centralized authentication,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,SEC-10,Network Isolation,Production compute resources must run in private network segments,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,OBS-01,Centralized Logging,System logs must be aggregated into a centralized logging platform,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,OBS-02,Log Retention,Operational logs must be retained for minimum 90 days,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,OBS-03,Audit Log Retention,Audit logs must be retained for five years,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,OBS-04,System Metrics,System must emit operational metrics,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,OBS-05,Alerting,Critical system failures must trigger alerts,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,OBS-06,Error Rate Monitoring,System error rates must be monitored,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,OBS-07,Latency Monitoring,System latency must be continuously measured,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,OBS-08,Dependency Monitoring,External dependencies must be monitored,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,PERF-01,API Latency,Average API latency must be below 400ms,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,PERF-02,Peak Latency,P95 latency must remain below defined threshold,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,PERF-03,Load Testing,System must undergo load testing before major releases,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,PERF-04,Stress Testing,System must undergo stress testing to determine failure thresholds,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,PERF-05,Autoscaling,System must automatically scale under load,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,PERF-06,Async Processing,Long running workloads must use asynchronous processing,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,INF-01,Infrastructure as Code,Infrastructure must be provisioned using infrastructure as code,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,INF-02,Environment Isolation,Development and production environments must be isolated,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,INF-03,Configuration Management,System configuration must be version controlled,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,INF-04,Network Segmentation,Network architecture must isolate tiers,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,INF-05,Dependency Version Control,Software dependencies must be version controlled,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,CICD-01,Automated Builds,System builds must be automated,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,CICD-02,Automated Deployments,Deployments must use automated pipelines,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,CICD-03,Rollback Capability,Production deployments must support rollback,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,CICD-04,Blue Green Deployment,Production systems must support blue green deployments,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,CICD-05,Deployment Logging,Deployment events must be logged,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,DATA-01,Tenant Isolation,Data access must be scoped by tenant identifier,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,DATA-02,Referential Integrity,Database relationships must enforce integrity constraints,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,DATA-03,Input Validation,System inputs must be validated,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,DATA-04,Idempotent Operations,Critical endpoints must support idempotency,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,DATA-05,Schema Versioning,Database schema changes must be version controlled,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,GOV-01,Documentation,System architecture must be documented,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,GOV-02,Dependency Updates,Dependencies must be periodically updated,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,GOV-03,Monitoring Dashboards,System operational dashboards must exist,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,GOV-04,Operational Runbooks,System must have operational runbooks,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,GOV-05,Audit Compliance,System must support periodic audit reviews,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,AV-11,Regional service redundancy,Critical services must support deployment across multiple regions where feasible,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,AV-12,Service startup resilience,Services must start automatically after host or container restart,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,AV-13,Dependency timeout management,System integrations must implement connection timeouts and retry logic,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,AV-14,Traffic surge protection,System must implement mechanisms to handle sudden traffic spikes,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,DR-08,Disaster recovery documentation,System recovery procedures must be documented and accessible to operations teams,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,DR-09,Backup monitoring,Backup jobs must be monitored and alert on failure,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,DR-10,Backup integrity validation,Backups must be periodically validated through restore testing,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,SEC-11,API authentication enforcement,All APIs must require authentication before processing requests,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,SEC-12,Role-based authorization,System must enforce role-based authorization for sensitive operations,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,SEC-13,Security incident logging,Security incidents must be recorded in centralized logging systems,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,SEC-14,Vulnerability management,System vulnerabilities must be tracked and remediated periodically,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,OBS-09,Service uptime metrics,System uptime metrics must be collected and visualized,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,OBS-10,Infrastructure resource monitoring,CPU memory and disk utilization must be monitored for production systems,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,OBS-11,Alert escalation policies,Alerting systems must include escalation policies for critical incidents,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,OBS-12,Log search capability,System logs must support search and filtering capabilities,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,PERF-07,Database query performance monitoring,Database query performance must be monitored and analyzed periodically,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,PERF-08,Resource utilization thresholds,System resource usage thresholds must trigger alerts,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,PERF-09,Caching strategy,System must implement caching for frequently accessed data where applicable,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,INF-06,Immutable infrastructure deployments,Infrastructure changes must be deployed through version-controlled templates,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,INF-07,Infrastructure change tracking,All infrastructure changes must be traceable through version control history,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,CICD-06,Deployment approval controls,Production deployments must require approval before execution,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,CICD-07,Build artifact storage,Build artifacts must be stored in a controlled artifact repository,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,DATA-06,Data backup classification,Critical data must be classified and included in backup policies,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,DATA-07,Data retention policies,System data must follow defined retention policies,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,GOV-06,Operational ownership,Systems must have defined operational ownership,Not Measured,Manual,Note,,,,No change,No change,
-Q1,All Products,GOV-07,Engineering standards compliance,Systems must comply with Bespoke engineering standards policy,Not Measured,Manual,Note,,,,No change,No change,
+Requirement ID,Category,Requirement,Standard / Configuration,Acceptable Evidence,Unacceptable Evidence,Rationale
+AV-01,Availability,Multi-AZ Deployment,Production workloads must run across >=2 Availability Zones,Infrastructure configuration or architecture diagram,Single AZ deployment,Prevents outages caused by availability zone failure
+SEC-01,Security,Encryption in Transit,All external endpoints must enforce TLS,Endpoint configuration or certificate validation,Optional HTTPS,Protects sensitive data in transit
+DR-01,Disaster Recovery,Defined DR Strategy,System must have documented disaster recovery architecture,DR architecture documentation,Undocumented recovery plan,Ensures recoverability during infrastructure failure
+LOG-01,Observability,Operational Log Retention,Logs retained for >=90 days,Logging configuration,Logs deleted within days,Supports incident investigation
+PERF-01,Performance,API Latency,Average API latency <=400ms,Monitoring dashboards,Anecdotal claims,Ensures system responsiveness
+AV-01,Availability,Multi-AZ Deployment,Production workloads must run across at least two Availability Zones,Infrastructure architecture or deployment configuration,Single AZ deployment,Prevents outage caused by AZ failure
+AV-02,Availability,Database High Availability,Production databases must use Multi-AZ configuration,Database configuration showing multi-AZ,Single instance database,Ensures database failover capability
+AV-03,Availability,Health Monitoring,Services must expose health endpoints and monitoring checks,Monitoring dashboard or health endpoint configuration,No health checks,Enables automated recovery
+AV-04,Availability,Automatic Service Recovery,Compute platforms must automatically restart failed workloads,Container orchestration configuration,Manual restart procedures,Reduces downtime from application crashes
+AV-05,Availability,Uptime Monitoring,System uptime must be continuously monitored,Uptime monitoring dashboards,Manual uptime estimation,Ensures availability measurement
+AV-06,Availability,Load Balancing,Production systems must use load balancing,Load balancer configuration,Single instance routing,Improves system reliability
+AV-07,Availability,Auto Scaling,System must support automatic scaling during demand spikes,Auto scaling configuration,Manual scaling,Ensures responsiveness during peak usage
+AV-08,Availability,Graceful Degradation,System must continue operating during partial failures,Fallback architecture design,System crash during dependency failure,Improves resilience
+AV-09,Availability,Peak Window Handling,System must support defined operational peak windows,Load test reports,No peak load testing,Ensures real-world capacity planning
+AV-10,Availability,Service Dependency Monitoring,All service dependencies must be monitored,Monitoring dashboards,Unmonitored dependencies,Improves failure visibility
+DR-01,Disaster Recovery,Disaster Recovery Architecture,System must have documented disaster recovery architecture,DR documentation,Undocumented recovery procedures,Ensures recoverability
+DR-02,Disaster Recovery,Recovery Time Objective,System must support recovery within four hours,DR testing reports,Estimated recovery times,Defines downtime tolerance
+DR-03,Disaster Recovery,Recovery Point Objective,System must limit data loss to 24 hours or less,Backup configuration,Undefined recovery objectives,Defines acceptable data loss
+DR-04,Disaster Recovery,Cross Region DR,Critical environments must support cross region recovery,Multi-region architecture documentation,Single region deployment,Reduces regional outage risk
+DR-05,Disaster Recovery,DR Testing,Disaster recovery procedures must be tested at least annually,DR exercise reports,Untested DR plan,Validates recovery capability
+DR-06,Disaster Recovery,Backup Verification,Backups must be validated via restore testing,Restore validation reports,Assumption backups work,Ensures backup reliability
+DR-07,Disaster Recovery,Automated Backup Scheduling,Backup schedules must be automated,Backup configuration,Manual backups only,Improves operational reliability
+SEC-01,Security,Encryption in Transit,All external endpoints must enforce TLS,Endpoint configuration,Optional HTTPS,Protects data in transit
+SEC-02,Security,Encryption at Rest,All persistent data stores must be encrypted,Storage configuration,Plaintext storage,Protects stored data
+SEC-03,Security,Secrets Management,Secrets must be stored in a centralized secret manager,Secret manager configuration,Hardcoded credentials,Prevents credential exposure
+SEC-04,Security,Least Privilege Access,Access permissions must follow least privilege principles,IAM policy review,Administrator level access for all services,Reduces insider threat risk
+SEC-05,Security,Web Application Firewall,Production endpoints must use web application firewall protection,WAF configuration,No application firewall,Mitigates common attacks
+SEC-06,Security,Security Monitoring,System must enable security monitoring tools,Security monitoring dashboards,No monitoring tools,Detects security incidents
+SEC-07,Security,Security Logging,Security related events must be logged,Audit logs,Missing audit trails,Supports investigations
+SEC-08,Security,Credential Rotation,Credentials must be rotated periodically,Credential rotation policies,Static credentials,Improves security posture
+SEC-09,Security,Identity Federation,Identity management must support centralized authentication,Identity provider configuration,Local credential storage,Improves identity governance
+SEC-10,Security,Network Isolation,Production compute resources must run in private network segments,Network architecture diagrams,Public compute instances,Improves network security
+OBS-01,Observability,Centralized Logging,System logs must be aggregated into a centralized logging platform,Logging architecture documentation,Distributed unmanaged logs,Simplifies debugging
+OBS-02,Observability,Log Retention,Operational logs must be retained for minimum 90 days,Log retention configuration,Short log retention periods,Supports incident investigation
+OBS-03,Observability,Audit Log Retention,Audit logs must be retained for five years,Compliance logging configuration,Missing long term logs,Supports regulatory compliance
+OBS-04,Observability,System Metrics,System must emit operational metrics,Monitoring dashboards,No metrics emitted,Enables performance analysis
+OBS-05,Observability,Alerting,Critical system failures must trigger alerts,Alert configuration,Passive logging only,Improves response time
+OBS-06,Observability,Error Rate Monitoring,System error rates must be monitored,Monitoring dashboards,No error tracking,Detects degradation
+OBS-07,Observability,Latency Monitoring,System latency must be continuously measured,Latency dashboards,Anecdotal performance reports,Ensures responsiveness
+OBS-08,Observability,Dependency Monitoring,External dependencies must be monitored,Monitoring dashboards,Unmonitored dependencies,Improves system visibility
+PERF-01,Performance,API Latency,Average API latency must be below 400ms,Monitoring dashboards,Anecdotal performance reports,Ensures responsive systems
+PERF-02,Performance,Peak Latency,P95 latency must remain below defined threshold,Latency monitoring dashboards,Undefined peak latency targets,Ensures performance during peak load
+PERF-03,Performance,Load Testing,System must undergo load testing before major releases,Load testing reports,No load testing,Validates scalability
+PERF-04,Performance,Stress Testing,System must undergo stress testing to determine failure thresholds,Stress test reports,No stress testing,Defines capacity limits
+PERF-05,Performance,Autoscaling,System must automatically scale under load,Autoscaling configuration,Manual scaling only,Supports variable workloads
+PERF-06,Performance,Async Processing,Long running workloads must use asynchronous processing,Queue or async architecture,Blocking operations,Improves performance
+INF-01,Infrastructure,Infrastructure as Code,Infrastructure must be provisioned using infrastructure as code,Infrastructure repository,Manual infrastructure creation,Prevents configuration drift
+INF-02,Infrastructure,Environment Isolation,Development and production environments must be isolated,Architecture diagrams,Shared environments,Reduces production risk
+INF-03,Infrastructure,Configuration Management,System configuration must be version controlled,Configuration repository,Manual configuration,Improves traceability
+INF-04,Infrastructure,Network Segmentation,Network architecture must isolate tiers,Network diagrams,Flat network topology,Improves security
+INF-05,Infrastructure,Dependency Version Control,Software dependencies must be version controlled,Dependency manifests,Unpinned dependencies,Ensures reproducibility
+CICD-01,CI/CD,Automated Builds,System builds must be automated,CI/CD pipeline configuration,Manual builds,Improves reliability
+CICD-02,CI/CD,Automated Deployments,Deployments must use automated pipelines,Pipeline configuration,Manual deployments,Reduces human error
+CICD-03,CI/CD,Rollback Capability,Production deployments must support rollback,Deployment pipeline configuration,Manual rollback procedures,Improves deployment safety
+CICD-04,CI/CD,Blue Green Deployment,Production systems must support blue green deployments,Deployment architecture,Direct replacement deployments,Reduces outage risk
+CICD-05,CI/CD,Deployment Logging,Deployment events must be logged,Pipeline logs,No deployment history,Supports traceability
+DATA-01,Data Integrity,Tenant Isolation,Data access must be scoped by tenant identifier,Code review or schema design,Global shared data access,Prevents cross tenant data access
+DATA-02,Data Integrity,Referential Integrity,Database relationships must enforce integrity constraints,Database schema review,Orphan records allowed,Ensures data consistency
+DATA-03,Data Integrity,Input Validation,System inputs must be validated,Application validation logic,Unchecked input,Prevents malformed data
+DATA-04,Data Integrity,Idempotent Operations,Critical endpoints must support idempotency,API design documentation,Duplicate operations possible,Prevents duplicate actions
+DATA-05,Data Integrity,Schema Versioning,Database schema changes must be version controlled,Migration scripts,Manual schema changes,Improves data management
+GOV-01,Governance,Documentation,System architecture must be documented,Architecture documentation,Undocumented systems,Improves maintainability
+GOV-02,Governance,Dependency Updates,Dependencies must be periodically updated,Dependency scan reports,Outdated dependencies,Improves security
+GOV-03,Governance,Monitoring Dashboards,System operational dashboards must exist,Dashboard screenshots,No operational dashboards,Improves operational visibility
+GOV-04,Governance,Operational Runbooks,System must have operational runbooks,Runbook documentation,No operational procedures,Improves incident response
+GOV-05,Governance,Audit Compliance,System must support periodic audit reviews,Audit reports,No audit records,Supports governance
+AV-11,Availability,Regional service redundancy,Critical services must support deployment across multiple regions where feasible,Multi-region architecture documentation,Single-region architecture without recovery plan,Improves resilience against regional outages
+AV-12,Availability,Service startup resilience,Services must start automatically after host or container restart,Container orchestration configuration or system startup scripts,Manual service startup procedures,Reduces recovery time after infrastructure restart
+AV-13,Availability,Dependency timeout management,System integrations must implement connection timeouts and retry logic,Application configuration showing timeout and retry policies,Infinite retry loops or no retry strategy,Prevents cascading system failures
+AV-14,Availability,Traffic surge protection,System must implement mechanisms to handle sudden traffic spikes,Rate limiting configuration or autoscaling policies,Unprotected endpoints without scaling capability,Protects system stability during unexpected demand
+DR-08,Disaster Recovery,Disaster recovery documentation,System recovery procedures must be documented and accessible to operations teams,Disaster recovery runbook documentation,Undocumented recovery processes,Ensures recoverability procedures are known
+DR-09,Disaster Recovery,Backup monitoring,Backup jobs must be monitored and alert on failure,Backup monitoring dashboards or alert configuration,Backup jobs without monitoring,Ensures backup reliability
+DR-10,Disaster Recovery,Backup integrity validation,Backups must be periodically validated through restore testing,Restore validation reports or test logs,Assumption backups are valid without testing,Ensures backup recoverability
+SEC-11,Security,API authentication enforcement,All APIs must require authentication before processing requests,API gateway configuration or authentication middleware configuration,Public endpoints without authentication,Protects platform endpoints
+SEC-12,Security,Role-based authorization,System must enforce role-based authorization for sensitive operations,Application authorization configuration,Unrestricted access to administrative operations,Ensures controlled access
+SEC-13,Security,Security incident logging,Security incidents must be recorded in centralized logging systems,Security event logs or monitoring dashboards,Missing incident logs,Supports forensic investigation
+SEC-14,Security,Vulnerability management,System vulnerabilities must be tracked and remediated periodically,Vulnerability scan reports or security remediation tickets,Untracked security vulnerabilities,Improves system security posture
+OBS-09,Observability,Service uptime metrics,System uptime metrics must be collected and visualized,Monitoring dashboards displaying uptime metrics,No uptime measurement capability,Enables SLA measurement
+OBS-10,Observability,Infrastructure resource monitoring,CPU memory and disk utilization must be monitored for production systems,Infrastructure monitoring dashboards,No infrastructure monitoring,Prevents resource exhaustion
+OBS-11,Observability,Alert escalation policies,Alerting systems must include escalation policies for critical incidents,Alert configuration documentation,Alerts without escalation paths,Ensures timely response to incidents
+OBS-12,Observability,Log search capability,System logs must support search and filtering capabilities,Log management platform configuration,Unstructured logs without search capability,Improves troubleshooting efficiency
+PERF-07,Performance,Database query performance monitoring,Database query performance must be monitored and analyzed periodically,Database monitoring dashboards or query logs,Unmonitored database performance,Prevents database bottlenecks
+PERF-08,Performance,Resource utilization thresholds,System resource usage thresholds must trigger alerts,Monitoring alerts configuration,No thresholds defined,Prevents system overload
+PERF-09,Performance,Caching strategy,System must implement caching for frequently accessed data where applicable,Application architecture documentation or cache configuration,Repeated database queries for identical data,Improves system efficiency
+INF-06,Infrastructure,Immutable infrastructure deployments,Infrastructure changes must be deployed through version-controlled templates,Infrastructure repository or deployment pipeline logs,Manual infrastructure modification,Ensures reproducibility
+INF-07,Infrastructure,Infrastructure change tracking,All infrastructure changes must be traceable through version control history,Version control repository logs,Manual undocumented changes,Improves operational accountability
+CICD-06,CI/CD,Deployment approval controls,Production deployments must require approval before execution,CI/CD pipeline approval configuration,Uncontrolled direct production deployments,Improves deployment governance
+CICD-07,CI/CD,Build artifact storage,Build artifacts must be stored in a controlled artifact repository,Artifact repository configuration,Local build artifacts without centralized storage,Ensures reproducible builds
+DATA-06,Data Integrity,Data backup classification,Critical data must be classified and included in backup policies,Data classification documentation or backup configuration,Unclassified data excluded from backups,Ensures critical data protection
+DATA-07,Data Integrity,Data retention policies,System data must follow defined retention policies,Data retention configuration or policy documentation,Undefined retention periods,Ensures compliance and storage management
+GOV-06,Governance,Operational ownership,Systems must have defined operational ownership,Service ownership documentation,Undefined service ownership,Ensures accountability
+GOV-07,Governance,Engineering standards compliance,Systems must comply with Bespoke engineering standards policy,Audit results or compliance reports,No compliance validation,Ensures adherence to engineering governance
