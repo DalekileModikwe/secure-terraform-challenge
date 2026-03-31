@@ -9,3 +9,6 @@ override.tf.json
 *_override.tf.json
 *.zip
 
+public-handler.zip
+isolated-handler.zip
+.terraform
